@@ -1,7 +1,7 @@
 require_relative 'lib/legion/extensions/elastic_app_search/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'legion-extensions-elastic_app_search'
+  spec.name          = 'lex-elastic_app_search'
   spec.version       = Legion::Extensions::ElasticAppSearch::VERSION
   spec.authors       = ['Esity']
   spec.email         = ['matthewdiverson@gmail.com']
