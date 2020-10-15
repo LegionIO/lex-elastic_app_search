@@ -1,15 +1,14 @@
-# Legion::Extensions::ElasticAppSearch
+# Legion::Extensions::Http
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/legion/extensions/elastic_app_search`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A Legion Extension designed to integrate with [Elastic App Search](https://www.elastic.co/app-search/) using
+the [elastic-app-search gem](https://rubygems.org/gems/elastic-app-search)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'legion-extensions-elastic_app_search'
+gem 'lex-elastic_app_search'
 ```
 
 And then execute:
@@ -18,27 +17,38 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install legion-extensions-elastic_app_search
+    $ gem install lex-elastic_app_search
+
+## Adding to Legion
+You can manually install with a `gem install lex-elastic_app_search` command or by adding it into your settings with something like this
+```json
+{
+  "extensions": {
+    "elastic_app_search": {
+      "enabled": true
+    }
+  }
+}
+```
 
 ## Usage
+* The host will default to `http://localhost:3002` unless you pass it in as an argument or settings it in `Legion::Settings`
 
-TODO: Write usage instructions here
+*More to be added*
 
-## Development
+##### Runners
+1) analytics
+2) click through
+3) credentials
+4) curations
+5) documents
+6) engines
+7) schemas
+8) search
+9) synonyms
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/legion-extensions-elastic_app_search. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/legion-extensions-elastic_app_search/blob/master/CODE_OF_CONDUCT.md).
-
+#### Example Payloads
+*To be added*
 
 ## License
-
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Legion::Extensions::ElasticAppSearch project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/legion-extensions-elastic_app_search/blob/master/CODE_OF_CONDUCT.md).
