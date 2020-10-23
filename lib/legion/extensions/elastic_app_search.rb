@@ -3,7 +3,7 @@ require 'legion/extensions/elastic_app_search/version'
 module Legion
   module Extensions
     module ElasticAppSearch
-      extend Legion::Extensions::Core
+      extend Legion::Extensions::Core if Legion::Extensions.const_defined? :Core
 
       def self.default_settings
         {
