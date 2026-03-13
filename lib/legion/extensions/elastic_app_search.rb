@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'legion/extensions/elastic_app_search/version'
 
 module Legion

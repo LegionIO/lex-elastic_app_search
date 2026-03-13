@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'lib/legion/extensions/elastic_app_search/version'
 
 Gem::Specification.new do |spec|
@@ -9,15 +11,16 @@ Gem::Specification.new do |spec|
   spec.description   = 'Connects Legion to Elastic App Search'
   spec.homepage      = 'https://github.com/LegionIO/lex-elastic_app_search'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
+  spec.required_ruby_version = '>= 3.4'
 
   spec.metadata = {
-    'bug_tracker_uri' => 'https://github.com/LegionIO/lex-elastic_app_search/issues',
-    'changelog_uri' => 'https://github.com/LegionIO/lex-elastic_app_search/blob/master/CHANGELOG.md',
-    'documentation_uri' => 'https://github.com/LegionIO/lex-elastic_app_search',
-    'homepage_uri' => 'https://github.com/LegionIO/lex-elastic_app_search',
-    'source_code_uri' => 'https://github.com/LegionIO/lex-elastic_app_search',
-    'wiki_uri' => 'https://github.com/LegionIO/lex-elastic_app_search/wiki'
+    'bug_tracker_uri'       => 'https://github.com/LegionIO/lex-elastic_app_search/issues',
+    'changelog_uri'         => 'https://github.com/LegionIO/lex-elastic_app_search/blob/master/CHANGELOG.md',
+    'documentation_uri'     => 'https://github.com/LegionIO/lex-elastic_app_search',
+    'homepage_uri'          => 'https://github.com/LegionIO/lex-elastic_app_search',
+    'source_code_uri'       => 'https://github.com/LegionIO/lex-elastic_app_search',
+    'wiki_uri'              => 'https://github.com/LegionIO/lex-elastic_app_search/wiki',
+    'rubygems_mfa_required' => 'true'
   }
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do

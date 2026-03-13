@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Legion
   module Extensions
     module ElasticAppSearch
@@ -15,12 +17,12 @@ module Legion
 
           def create(name:, type: 'private', read: true, write: false, access_all_engines: true, engines: [], **opts)
             client(opts).create_credential(
-              { name: name,
-                type: type,
-                read: read,
-                write: write,
+              { name:               name,
+                type:               type,
+                read:               read,
+                write:              write,
                 access_all_engines: access_all_engines,
-                engines: engines }
+                engines:            engines }
             )
           end
 

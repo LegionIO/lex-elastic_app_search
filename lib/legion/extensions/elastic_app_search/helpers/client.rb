@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'elastic-app-search'
 
 module Legion
@@ -8,7 +10,7 @@ module Legion
           def client(**opts)
             Elastic::AppSearch::Client.new(
               host_identifier: find_setting('host', opts),
-              api_key: find_setting('api_key', opts)
+              api_key:         find_setting('api_key', opts)
             )
           end
           include Legion::Extensions::Helpers::Lex
