@@ -15,15 +15,10 @@ module Legion
             client(opts).get_credential(name)
           end
 
-          def create(name:, type: 'private', read: true, write: false, access_all_engines: true, engines: [], **opts)
-            client(opts).create_credential(
-              { name:               name,
-                type:               type,
-                read:               read,
-                write:              write,
-                access_all_engines: access_all_engines,
-                engines:            engines }
-            )
+          def create(name:, credential_opts: {}, **opts)
+            defaults = { type: 'private', read: true, write: false, access_all_engines: true, engines: [] }
+            params = defaults.merge(credential_opts).merge(name: name)
+            client(opts).create_credential(params)
           end
 
           def update(name:, **opts)
