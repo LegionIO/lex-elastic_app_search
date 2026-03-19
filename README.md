@@ -14,6 +14,22 @@ Or add to your Gemfile:
 gem 'lex-elastic_app_search'
 ```
 
+## Standalone Usage
+
+```ruby
+require 'legion/extensions/elastic_app_search'
+
+client = Legion::Extensions::ElasticAppSearch::Client.new(
+  host: 'https://your-deployment.ent-search.region.aws.cloud.es.io',
+  api_key: 'your-api-key'
+)
+
+client.list_engines
+client.search(engine_name: 'my-engine', query: 'hello')
+```
+
+Constructor accepts `host:` (default `http://localhost:3002`) and `api_key:` kwargs.
+
 ## Runners
 
 | Runner | Operations |
@@ -46,8 +62,8 @@ Default host: `http://localhost:3002`. Override via Legion settings:
 ## Requirements
 
 - Ruby >= 3.4
-- [LegionIO](https://github.com/LegionIO/LegionIO) framework
 - Elastic App Search instance
+- [LegionIO](https://github.com/LegionIO/LegionIO) framework (optional for standalone client)
 
 ## License
 

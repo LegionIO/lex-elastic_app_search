@@ -68,6 +68,8 @@ Default settings:
 
 ## Development
 
+15 specs total.
+
 ```bash
 bundle install
 bundle exec rspec
