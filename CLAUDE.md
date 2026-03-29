@@ -10,7 +10,7 @@ Legion Extension that connects to Elastic App Search. Provides runners for manag
 
 **GitHub**: https://github.com/LegionIO/lex-elastic_app_search
 **License**: MIT
-**Version**: 0.2.0
+**Version**: 0.2.1
 
 ## Architecture
 
